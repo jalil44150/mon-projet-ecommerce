@@ -1,90 +1,74 @@
-* {
-  box-sizing: border-box;
+:root {
+  --fond: #f0f2f5;
+  --carte: #e2e8f0;
+  --texte: #2d3748;
+  --gris: #718096;
+}
+
+.dark-mode {
+  --fond: #1a202c;
+  --carte: #2d3748;
+  --texte: #f7fafc;
+  --gris: #a0aec0;
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 22px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-h6 {
-  margin-top: 0;
-  font-size: 12px;
-}
-
-code {
-  font-size: 1.2em;
-}
-
-ul {
-  padding-inline-start: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-.game {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--fond);
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.game-info {
-  margin-left: 20px;
+.weather-card {
+  background-color: var(--carte);
+  width: 320px;
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--texte);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--texte);
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 45px;
+  margin: 0;
+}
+.geo-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gris);
+  padding: 0;
 }
